@@ -7,19 +7,24 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
   <body>
+    <div class="wrap">
     <header>
       <nav>
         <ul>
-          <a href="index.html"><li>Home</li></a><!--
-       --><a href="about.html"><li>About</li></a>
+          <a href="index.html">Home</a><!--
+       --><a href="about.html">About</a>
         </ul>
       </nav>
     </header>
-    <div class="card">
-        <div class="avatar">
+    <div class="row card clearfix">
+        <div class="col-1-2" id="alien_rick">
             <!-- img path is relative to html file -->
-            <img src="assets/images/tinyrick.jpg" alt="Rick">
-          </div>
+            <img src="assets/images/showme.jpg" alt="Alien Rick">
+        </div>
+        <div class="col-1-2" id="dance">
+          <img src="assets/images/ilike.jpg" alt="Great performance by Rick and Morty">
+        </div>
     </div>
+  </div>
   </body>
 </html>

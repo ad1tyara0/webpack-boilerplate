@@ -6,14 +6,50 @@
        url('../assets/fonts/Quicksand-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
 	font-family: Quicksand-Regular;	
 }
+/* Wrapper Div */
+.wrap {
+  width: 95%;
+  max-width: 71rem;
+  margin: 0 auto;
+}
+/* Row */
+.row {
+  margin: 0;
+  padding: 0;
+}
+/* Columns - Columns are created as needed. */
+[class*="col"] {
+  float: left;
+  margin: 10px 0;
+}
+
+[class="col-1-2"] {
+  width: calc((100%) / 2);
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  /* max-width allows image to be responsive. */
+  height: auto;
+}
 
 p {
+  margin: 0;
+  padding: 0;
   font-size: 1.2rem;
   line-height: 1.6;
 }
@@ -26,25 +62,35 @@ nav {
 
 ul {
   list-style-type: none;
-  width: 10rem;
+  width: 18rem;
   margin: 4rem auto;
   padding: 0;
 }
 
-li {
-  display: inline-block;
-  text-align: center;
-  width: 5rem;
-}
-
 a {
   text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  width: 6rem;
+  margin-left: 1rem;
+  border: 3px solid #000;
+  padding: .5rem;
+}
+
+a:last-child {
+  margin-right: 1rem;
+}
+
+a:hover {
+ background-color: #E6E93A;
 }
 
 .card {
   height: 35.25rem;
-  width: 35.25rem;
-  margin: 0 auto;
+  width: 71rem;
+  margin: 0;
+  padding: 0;
 }
 
 .about-card {
@@ -53,17 +99,20 @@ a {
   margin: 0 auto;
 }
 
-.avatar {
+#alien_rick {
   max-width: 35.25rem;
-  width: 35.25rem;
   max-height: 35.25rem;
-  height: 35.25rem;
 }
 
-.avatar img {
-  max-width: 100%;
+#dance {
+  max-width: 35.25rem;
+  max-height: 35.25rem;
+  margin-left: .5rem;
+  display: none;
 }
 
-.avatar:hover {
-  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }

@@ -7,5 +7,9 @@ if (process.env.NODE_ENV !== 'production') {
 // Require|import the CSS file from styles folder to inject it into index.html automatically.
 import "../styles/main.css";
 
-console.log('Empty');
+var rick = document.getElementById('alien_rick');
+rick.addEventListener('click',function(){
+  var happyrick = document.getElementById('dance');
+  happyrick.style.display = "block"; 
+});
 
