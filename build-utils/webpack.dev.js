@@ -2,7 +2,11 @@
 
 const config = {
 	// Development Sourcemaps
-	devtool: "eval-source-map",
+	/*
+    * Using `cheap-*` sourcemaps because other sourcemaps are not working.
+    * Prefer 'eval-source-map' when possible.
+	*/
+	devtool: "cheap-eval-source-map",
 	// Loaders have to be installed using npm
 	module: {
 		rules: [
@@ -45,7 +49,8 @@ const config = {
 			}
 		]
 	},
-	plugins: []
+	plugins: [
+	]
 };
 
 module.exports = config;

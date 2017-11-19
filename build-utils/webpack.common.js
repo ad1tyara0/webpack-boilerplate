@@ -46,7 +46,7 @@ const config = {
 		new webpack.optimize.CommonsChunkPlugin({
 				name: 'common'
 			}),
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
 	]
 };
 

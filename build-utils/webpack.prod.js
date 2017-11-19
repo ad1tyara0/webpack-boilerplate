@@ -22,7 +22,11 @@ const cleanOptions = {
 
 const config = {
 	// Production Sourcemaps
-  devtool: 'source-map',
+	/*
+    * Using `cheap-*` sourcemaps because other sourcemaps are not working.
+    * Prefer 'source-map' when possible.
+	*/
+    devtool: 'cheap-source-map',
 	module: {
 		rules: [
 			// Loading HTML
