@@ -4,12 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "prod": "yarn webpack --env.env=prod",
-    "dev": "yarn webpack-dev-server --env.env=dev",
+    "prod": "npm run webpack --env.env=prod",
+    "dev": "npm run webpack-dev-server --env.env=dev",
     "webpack-dev-server": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "webpack": "node ./node_modules/webpack/bin/webpack.js",
-    "debug:dev": "yarn debug --env.env=dev",
-    "debug:prod": "yarn debug --env.env=prod",
+    "debug:dev": "npm run debug --env.env=dev",
+    "debug:prod": "npm run debug --env.env=prod",
     "debug": "node --inspect-brk node ./node_modules/webpack/bin/webpack.js"
   },
   "devDependencies": {
