@@ -3,10 +3,10 @@
 const glob = require('glob');
 const webpack = require('webpack');
 const commonPaths = require('./common-paths');
-const PurifyCSSPlugin = require('purifycss-webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 const BabelWebpackPlugin = require('babel-minify-webpack-plugin');
 
 // the path(s) that should be cleaned
@@ -123,10 +123,8 @@ const config = {
     new CleanWebpackPlugin(pathsToClean, cleanOptions),
     new ExtractTextPlugin('styles/[name].[contenthash].css'),
     // Make sure this is after ExtractTextPlugin!
-    new PurifyCSSPlugin({
-      // Give paths to parse for rules. These should be absolute!
-      paths: glob.sync(commonPaths.indexHtmlPath),
-      minimize: true,
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
     }),
     new BabelWebpackPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
